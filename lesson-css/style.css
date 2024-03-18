@@ -97,7 +97,9 @@ div > input {
 } */
 
 .astronauti {
-    background-image: url("images/astronauti2.JPG");
-    /* background-repeat: repeat-y; */
-    background-size: contain;
+    /* background-image: url("images/astronauti2.JPG");
+    background-repeat: no-repeat;
+    background-size: contain; */
+    background: red url("images/IMG_4857.JPG") no-repeat center left;
+    background-size: cover;
 }
