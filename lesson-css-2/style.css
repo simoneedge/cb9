@@ -19,6 +19,8 @@ p {
     /* text-transform: uppercase; */
     /* letter-spacing: 5px;
     word-spacing: 20px; */
+    direction: rtl;
+    border: 1px dashed red;
 }
 
 a {

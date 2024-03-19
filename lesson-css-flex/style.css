@@ -1,0 +1,28 @@
+.contenitore-flex {
+    background-color: green;
+    height: 400px;
+    
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    justify-content: space-between;
+    /* align-content: space-between; */
+    align-items: center;
+
+    /* flex-flow: row wrap; */
+
+    /* gap: 20px; */
+}
+
+.box {
+    border: 1px solid red;
+    background-color: white;
+    width: 200px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

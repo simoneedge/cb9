@@ -102,4 +102,6 @@ div > input {
     background-size: contain; */
     background: red url("images/IMG_4857.JPG") no-repeat center left;
     background-size: cover;
+    text-align: justify;
+    direction: rtl;
 }
