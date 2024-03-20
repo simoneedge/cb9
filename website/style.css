@@ -9,6 +9,7 @@ body {
     background-color: #00004f;
     color: #ffffff;
     font-family: "Nunito", sans-serif;
+    padding-bottom: 300px;
 }
 
 /* header */
@@ -55,15 +56,18 @@ body {
 
 /* hero */
 .hero {
-    position: relative;
-    width: 100%;
     height: 100vh;
-    background-image: url("images/space.webp");
-    
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("images/space.webp");
+    
+}
+
+.hero-content {
+    display: flex;
 }
 
 .hero .title {
@@ -90,7 +94,20 @@ body {
 }
 
 .rocket {
-    animation: rocketAnim 2s ease infinite alternate;
+    animation: rocketAnim 2s linear infinite alternate;
+}
+
+@keyframes ufoAnim {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100px);
+    }
+}
+
+.ufo {
+    animation: ufoAnim 2s ease-in-out infinite alternate;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -99,4 +116,74 @@ body {
     }
 }
 /* end hero */
+
+/* team */
+.team {
+    border: 1px solid aquamarine;
+}
+
+.team-title {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 42px;
+}
+
+.team-container {
+    border: 1px solid green;
+}
+
+
+.team-image {
+    border: 1px solid red;
+    text-align: center;
+}
+.team-image img {
+    /* width: 100%;
+    height: auto; */
+}
+.team-content {
+    border: 1px solid yellow;
+    height: auto;
+    padding: 60px 20px;
+}
+
+.team-content .button-link {
+    margin-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .team-container {
+        display: flex;
+        /* align-items: center; */
+    }
+    .team-image {
+        width: 50%;
+    }
+
+    .team-content {
+        width: 50%;
+    }
+}
+/* end team */
+
+
+
+/* button */
+.button-link {
+    display: inline-block;
+    text-decoration: none;
+    /* border: 1px solid yellow; */
+    background-color: #56CFE1;
+    color: #00004f;
+    padding: 6px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.button-link:hover {
+    background-color: #ffffff;
+}
+/* end button */
 

@@ -5,11 +5,12 @@
     display: flex;
 
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
 
     justify-content: space-between;
     /* align-content: space-between; */
     align-items: center;
+    /* align-content: space-between; */
 
     /* flex-flow: row wrap; */
 
@@ -23,6 +24,6 @@
     height: 100px;
 
     display: flex;
+    /* justify-content: center; */
     align-items: center;
-    justify-content: center;
 }
