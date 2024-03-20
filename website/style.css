@@ -140,6 +140,11 @@ Nella Media query consideriamo solo i disposivi che hanno una larghezza dello sc
 }
 /* end hero */
 
+
+/* *************************************
+    TEAM
+************************************* */
+
 /* sezione team */
 .team {
     border: 1px solid aquamarine; /* bordo provvisiorio dell'elemento per visualizzarlo meglio */
@@ -204,6 +209,9 @@ Da tablet in su applichiamo display flex per una distribuzione degli elementi or
 /* end team */
 
 
+/* *************************************
+    BUTTON LINK
+************************************* */
 
 /* button, definiamo lo stile del pulsante link */
 .button-link {
