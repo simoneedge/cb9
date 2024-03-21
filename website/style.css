@@ -195,7 +195,7 @@ Da tablet in su applichiamo display flex per una distribuzione degli elementi or
     /* selezioniamo il contenitore per applicare il display flex solo per i dispositivi da tablet in su */
     .team-container {
         display: flex; /* applichiamo display flex al contenitore per una visualizzazione orizzontale a due colonne */
-        /* align-items: center; */
+        align-items: center;
     }
     /* assegniamo una larghezza dell'elemento che contiene l'immagine, al 50% della finestra, solo per i dispositivi da tablet in su */
     .team-image {
@@ -230,4 +230,60 @@ Da tablet in su applichiamo display flex per una distribuzione degli elementi or
     background-color: #ffffff; /* assegniamo il nuovo colore di sfondo al passaggio del mouse */
 }
 /* end button */
+
+/* section people */
+.people {
+    background-color: #7209B7;        
+    padding-top: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.people .people-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.people-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1024px) {
+    .people-container {
+        flex-direction: row;
+    }
+
+    .people .people-title {
+        font-size: 42px;
+    }
+    .card-people {
+        width: 25%;
+    }
+}
+
+.card-people {
+    border: 1px solid yellow;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.card-people img {
+    border-radius: 100%;
+}
+
+.card-people h3 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.card-people h4 {
+    color: #56CFE1;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* end section people */
 
