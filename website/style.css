@@ -5,8 +5,9 @@
     box-sizing: border-box; /* assegnando border-box inlcudiamo border e padding alle dimensioni degli elementi */
 }
 
+/* selezioniamo l'intera pagina html per applicare un effetto smooth per interni alla pagina */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Abilita un'animazione di scorrimento fluido quando un utente clicca su un link che punta a una posizione ancorata all'interno della pagina web. */
 }
 
 body {
@@ -237,53 +238,64 @@ Da tablet in su applichiamo display flex per una distribuzione degli elementi or
 }
 /* end button */
 
-/* section people */
+/* *************************************
+    SECTION PEOPLE
+************************************* */
+
+
+/* selezioniamo la sezione div classe section people */
 .people {
-    background-color: #7209B7;        
-    padding-top: 40px;
-    padding-bottom: 60px;
-    text-align: center;
+    background-color: #7209B7; /* colore sfondo viola */         
+    padding-top: 40px; /* spazio interno superiore di 40px */
+    padding-bottom: 60px; /* spazio interno inferiore di 40px */
+    text-align: center; /* allineamento centrale per tutti i contenuti interni alla section */
 }
 
+/* selezioniamo il titolo con la classe people-title, possiamo usare il selettore diretto di classe .people-title */    */
 .people .people-title {
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* selezioniamo il contenitore della sezione, contiene gli elementi card che saranno visualizzati in verticale per dispositivi mobile e in orizzontale per dispositivi desktop  */
 .people-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: flex; /* abilitiamo il contenitore flex per distribuire gli elementi */
+    flex-direction: column; /* modifichiamo l'orientamento del flex in verticale, per dispositivi mobile, cambiamo l'orientamento in row per dektop nella media query */
+    flex-wrap: wrap; /* il contenitore può contenere molti elementi card, inserendo la proprietà flex-wrap spingiamo gli elementi in più righe quando lo spazio disponibile nel contenitore non è sufficiente a contenerli tutti su una singola riga.  */
 }
 
+/* usiamo la media query per applicare stili diversi per l'orientamento del contenitore flex, la grandezza del titolo e la larghezza dell'elemento card people  */
 @media only screen and (min-width: 1024px) {
     .people-container {
-        flex-direction: row;
+        flex-direction: row; /* modifichiamo l'orientamento del contenitore flex in riga orizzontale */
     }
     .people .people-title {
-        font-size: 42px;
+        font-size: 42px; /* aumentiamo il font del titolo */
     }
     .card-people {
-        width: 25%;
+        width: 25%; /* fissiamo la larghezza dell'elemento card ad 1/4 dello spazio */
     }
 }
 
 .card-people {
     border: 1px solid yellow;
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 40px;
+    text-align: center; /* allineiamo contenuto e testi al centro */
+    padding: 20px; /* aggiungiamo uno spazio interno */
+    margin-bottom: 40px; /* aggiungiamo uno spazio esterno inferiore per distanziare verticalmente gli elementi card */
 }
 
+/* selezioniamo l'immagine per effetto cerchio  */
 .card-people img {
-    border-radius: 100%;
+    border-radius: 100%; /* aggiungiamo il border radius effetto cerchio, l'immagine ha un taglio quadrato di 200x200 px, possiamo usare anche un'unità di misura in pixel, border-radius: 100px */
 }
 
+/* selezioniamo il titolo dell'elemento card, il nome, per assegnare grandezza e peso del font */
 .card-people h3 {
     font-size: 26px;
     font-weight: bold;
 }
 
+/* selezioniamo il testo dell'elemento card, il soprannome, per assegnare colore, grandezza e peso del font */
 .card-people h4 {
     color: #56CFE1;
     font-size: 22px;
@@ -293,6 +305,7 @@ Da tablet in su applichiamo display flex per una distribuzione degli elementi or
 /* end section people */
 
 
+/* esempio ripasso display block, inline e inline-block */
 /* .div-block {
     border: 1px solid red;
 }
@@ -303,32 +316,47 @@ Da tablet in su applichiamo display flex per una distribuzione degli elementi or
     margin-top: 20px;
 } */
 
-/* travel */
+
+/* *************************************
+    TRAVEL
+************************************* */
+
+/* sezione travel, aggiungiamo spazio superiore ed inferiore per alla section per maggiore leggibilità e visibilità */
 .travel {
-    padding-top: 40px;
+    padding-top: 40px; 
     padding-bottom: 40px;
 }
 
+
+/* allineiamo il titolo della sezione centralmente */
 .travel h2 {
     text-align: center;
 }
 
+/* selezioniamo gli elementi due colonne immagine e contenuto testo, visualizzazione verticale per dispositivi mobile e orizzontale per dispositivi desktop  */
 .travel-item {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* abilitiamo flex per disporre gli elementi  */
+    flex-direction: column; /* modifichiamo l'orientamento del flex in verticale, per dispositivi mobile, cambiamo l'orientamento in row per desktop nella media query */
 }
 
+/* usiamo la media query per applicare stili diversi per l'orientamento del contenitore flex e la larghezza al 50% delle due colonne, immagine e content  */
 @media only screen and (min-width: 1024px) {
     .travel-item {
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; /* usiamo row-reverse per invertire contenuto testo e immagine. Nel design, da mobile, il primo elemento è il contenuto testo e poi l'immagine, da desktop il primo elemento orizzontale è l'immagine d il secondo il contenuto testo.   */
         align-items: center;
     }   
 
+    /* La pseudo-classe nth-child permette di selezionare uno o più figli di un elemento in base alla loro posizione all'interno del contenitore. 
+       - n: Seleziona l'n-esimo figlio.
+       - even: Seleziona tutti i figli con indice pari (2, 4, 6...)
+       - odd: Seleziona tutti i figli con indice dispari (1, 3, 5...)
+       in questo caso modifichiamo l'ordine delle colonne per i figli dispari per avere l'aternanza tra le due colonne contenuto testo e immagine
+    */
     .travel-item:nth-child(odd) {
         flex-direction: row;
     }
     
-
+    /* assegniamo una larghezza del 50% alle due colonne contenuto testo e immagine */
     .travel-content {
         width: 50%;
     }
@@ -338,12 +366,14 @@ Da tablet in su applichiamo display flex per una distribuzione degli elementi or
     }
 }
 
+/* selezioniamo la colonna per aggiungere spazi interni */
 .travel-content {
     border: 1px solid yellow;
     padding: 20px;
     padding-bottom: 40px;
 }
 
+/* modifichiamo colore del titolo h3 e aggiungiamo uno spazio esterno inferiore per distanziare il titolo dal paragrafo che lo segue */
 .travel-content h3 {
     color: #56CFE1;
     margin-bottom: 20px;
@@ -353,6 +383,12 @@ Da tablet in su applichiamo display flex per una distribuzione degli elementi or
     border: 1px solid red;
 }
 
+/* 
+    Assegniamo object fit cover all'immagine per adattarla al suo contenitore.
+    object-fit è una proprietà molto utile per garantire una visualizzazione ottimale su schermi di diverse dimensioni e per creare layout più responsive.
+    Il valore cover di object fit ridimensiona l'immagine o il video in modo che riempia completamente il contenitore, anche se ciò significa ritagliare l'immagine per adattarsi alle proporzioni del contenitore.
+    Definiamo larghezza 100% e altezza 100% per avere l'immagine sempre proporzionata.
+*/
 .travel-image img {
     object-fit: cover;
     width: 100%;
