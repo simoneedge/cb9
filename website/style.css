@@ -5,11 +5,15 @@
     box-sizing: border-box; /* assegnando border-box inlcudiamo border e padding alle dimensioni degli elementi */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #00004f; /* background color a tutto il body */
     color: #ffffff; /* colore del testo bianco di default per tutto il sito (il background è scuro quindi risalta il testo) */
     font-family: "Nunito", sans-serif; /* famiglia del font da google fonts (vedi index.html riga 8-10 per l'import) */
-    padding-bottom: 300px; /* provvisorio, lo abbiamo inserito per dare spazio in fondo alla pagina e vedere meglio il contenuto*/
+    /*padding-bottom: 300px;*/ /* provvisorio, lo abbiamo inserito per dare spazio in fondo alla pagina e vedere meglio il contenuto*/
 }
 
 /* *************************************
@@ -18,8 +22,10 @@ body {
 
 /* header, abbiamo assegnato l'id #main-header per essere sicuri di stilizzare l'header principale */
 #main-header {
+    position: fixed;
     width: 100%; /* larghezza header al 100% */
     background-color: #00004f; /* colore di sfondo */
+    z-index: 10;
 }
 
 /* Selezioniamo i link dell'header per assegnargli lo stile principale */
@@ -254,7 +260,6 @@ Da tablet in su applichiamo display flex per una distribuzione degli elementi or
     .people-container {
         flex-direction: row;
     }
-
     .people .people-title {
         font-size: 42px;
     }
@@ -286,4 +291,72 @@ Da tablet in su applichiamo display flex per una distribuzione degli elementi or
 }
 
 /* end section people */
+
+
+/* .div-block {
+    border: 1px solid red;
+}
+
+.anchor-inline {
+    border: 1px solid yellow;
+    display: inline-block;
+    margin-top: 20px;
+} */
+
+/* travel */
+.travel {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.travel h2 {
+    text-align: center;
+}
+
+.travel-item {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 1024px) {
+    .travel-item {
+        flex-direction: row-reverse;
+        align-items: center;
+    }   
+
+    .travel-item:nth-child(odd) {
+        flex-direction: row;
+    }
+    
+
+    .travel-content {
+        width: 50%;
+    }
+
+    .travel-image {
+        width: 50%;
+    }
+}
+
+.travel-content {
+    border: 1px solid yellow;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+.travel-content h3 {
+    color: #56CFE1;
+    margin-bottom: 20px;
+}
+
+.travel-image {
+    border: 1px solid red;
+}
+
+.travel-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/* end travel */
 
